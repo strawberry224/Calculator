@@ -43,7 +43,7 @@ class CalculatorBrain {
         knownOps["−"] = Op.BinaryOperation("−") { $1 - $0 }
         knownOps["√"] = Op.UnaryOperation("√", sqrt)
     }
-    
+        
     typealias PropertyList = AnyObject
     
     var program: PropertyList { // guaranteed to be a PropertyList
@@ -63,7 +63,7 @@ class CalculatorBrain {
             }
         }
     }
-    
+
     private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
         if !ops.isEmpty {
             var remainingOps = ops
